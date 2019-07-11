@@ -1,0 +1,39 @@
+body{
+    display: grid;
+    background-color: rgb(181, 154, 206);
+    grid-template-rows: 1fr 22fr;
+    grid-template-areas: 
+    "i"
+    "p";
+}
+.top{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    height: 10px;
+
+    grid-area: i
+}
+
+#players{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-area: p;
+    grid-gap: 5px;
+  
+}
+.box{
+    background-color: rgb(164, 223, 220);
+    border-radius: 100px;
+}
+.text{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(218, 174, 80);
+  border-radius: 450px;
+
+}
