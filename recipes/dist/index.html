@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>recipes</title>
+</head>
+
+<body>
+    <div class="top">
+        <input type="text" id="ingredient-input" placeholder="Write Ingredient" />
+        <button onclick=getRecipes()>Get Recipes</button>
+    </div>
+    <div id="ingredient"></div>
+
+    <script id="ingredient-template" type="text/x-handlebars-template">
+                {{#each ingredient}}
+                <!-- The title of the recipe, which is also a link to the recipe video
+The image of the recipe
+A list of the ingredients -->
+                    <div class="box">
+                        <div>
+                                <a href={{href}}>{{title}}</a>
+                        </div> 
+                      <img onclick=log() src={{thumbnail}} alt="Smiley face"> 
+                      <ul>
+                            {{#each ingredients}} 
+                            <li>{{this}}</li>
+                            {{/each}}
+                      </ul>
+                    </div>
+                {{/each}}
+            </script>
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
